@@ -125,7 +125,7 @@ wait = {
     'pap':{},
     'message':"",
     'invite':{},
-    'autoCancel':{"on":True,"members":30},
+    'autoCancel':{"on":True,"members":15},
     'steal':{},
     'gift':{},
     'likeOn':{},     
@@ -567,12 +567,12 @@ def bot(op):
               #kr.sendText(op.param1,"Nama Grup: " + kr.getGroup(op.param1).name + "\nJumlah Member: " + str(len (kr.getGroup(op.param1).members)) + " orang\n\n")
               xname = cl.getContact(op.param2).displayName
               xlen = str(len(xname)+1)
-              cl.sendText(op.param1,"ALISH \n━━━━━━━━━━━━━━━━━\nNama Grup: " + cl.getGroup(op.param1).name + "\n Member: " + str(len (cl.getGroup(op.param1).members)) + " orang\n\nMaaf,  @"+xname+ "\nmember kurang dari 30 org\nUntuk info, \n\nID\nhttp://line.me/ti/p/~joker.alish")
+              cl.sendText(op.param1,"ALISH \n━━━━━━━━━━━━━━━━━\nNama Grup: " + cl.getGroup(op.param1).name + "\n Member: " + str(len (cl.getGroup(op.param1).members)) + " orang\n\nMaaf,  @"+xname+ "\nmember kurang dari 20 org\nUntuk info, \n\nID\nhttp://line.me/ti/p/~joker.alish")
               hanna = Message(to=op.param1, from_=None, text=None, contentType=13)
               hanna.contentMetadata={'mid':'u8b97ff6d6190da6f27485d9513a353e9'}
               cl.sendMessage(hanna)
               cl.sendText(op.param1," BOT")
-              hanna.contentMetadata={'mid':'u8b97ff6d6190da6f27485d9513a353e9'}
+              hanna.contentMetadata={'mid':'u5740a932f880a2913b4c645dc5ebe6d5'}
               cl.sendMessage(hanna)
               cl.sendText(op.param1,"SILAHKAN DI ADD KK BYE")
               time.sleep(1.0) 
@@ -2435,7 +2435,7 @@ def bot(op):
 		gid = cl.getGroupIdsJoined()
 		if msg.from_ in admin:
 		    for i in gid:
-			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~eclipse.id (｀・ω・´)\n\nSubcrabe\nhttp://line.me/ti/p/~joker.alish"  +  datetime.now().strftime('%H:%M:%S'))
+			cl.sendText(i,"=======[همگانی از طرف مدیر]=======\n\n"+bc+"\n\nAdmin http://line.me/ti/p/~joker.alish (｀・ω・´)\n\\n"  +  datetime.now().strftime('%H:%M:%S'))
 		    cl.sendText(msg.to,"Success BC BosQ")
 		else:
 		    cl.sendText(msg.to,"Khusus Admin")
